@@ -8,7 +8,8 @@ After=network-online.target xrdp-sesman.service
 Type=exec
 EnvironmentFile=-@sysconfdir@/sysconfig/xrdp
 EnvironmentFile=-@sysconfdir@/default/xrdp
-ExecStart=@sbindir@/xrdp $XRDP_OPTIONS --nodaemon
+# ExecStart=@sbindir@/xrdp $XRDP_OPTIONS --nodaemon
+ExecStart=@sbindir@/xrdp --nodaemon
 SystemCallArchitectures=native
 SystemCallFilter=@system-service
 # Uncomment the following line if you wish xrdp connections to survive
